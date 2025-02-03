@@ -1,0 +1,23 @@
+[project]
+name = "lead_enrichment"
+version = "0.1.0"
+description = "lead_enrichment using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0"
+]
+
+[project.scripts]
+lead_enrichment = "lead_enrichment.main:run"
+run_crew = "lead_enrichment.main:run"
+train = "lead_enrichment.main:train"
+replay = "lead_enrichment.main:replay"
+test = "lead_enrichment.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,23 @@
+[project]
+name = "email_writing"
+version = "0.1.0"
+description = "email_writing using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0"
+]
+
+[project.scripts]
+email_writing = "email_writing.main:run"
+run_crew = "email_writing.main:run"
+train = "email_writing.main:train"
+replay = "email_writing.main:replay"
+test = "email_writing.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
